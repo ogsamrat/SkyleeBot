@@ -1,0 +1,110 @@
+
+{
+  "name": "Meiko",
+  "description": "Telegram's Pro group manager. Modular Telegram group management bot!",
+  "logo": "https://telegra.ph/file/63350037b2146671a2511.jpg",
+  "keywords": [
+    "telegram",
+    "best",
+    "group",
+    "manager",
+    "3"
+  ],
+  "repository": "https://github.com/starry69/skylee.git",
+  "env": {
+    "ENV": {
+      "description": "Setting this to ANYTHING will enable env variables",
+      "value": "ANYTHING"
+    },
+    "TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "1115280928",
+      "required": false
+    },
+    "OWNER_USERNAME": {
+      "description": "Your username",
+      "value": "StarkxD",
+      "required": false
+    },
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode messages",
+      "value": "ANYTHING"
+    },
+    "URL": {
+      "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
+      "value": "Heroku url"
+    },
+    "MESSAGE_DUMP": {
+      "description": "optional: a chat where your replied saved messages are stored, to stop people deleting their old",
+      "value": "-no",
+      "required": false
+    },
+    "SUDO_USERS": {
+      "description": "A space separated list of user_ids which should be considered sudo users",
+      "value": "1263617196"
+    },
+    "SUPPORT_USERS": {
+      "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
+      "value": "1263617196"
+    },
+    "WHITELIST_USERS": {
+      "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
+      "value": "1263617196"
+    },
+    "DONATION_LINK": {
+      "description": "Optional: link where you would like to receive donations.",
+      "value": "https://www.paypal.me/Your_id_here",
+      "required": false
+    },
+    "PORT": {
+      "description": "Port to use for your webhooks",
+      "value": "5000",
+      "required": false
+    },
+    "DEL_CMDS": {
+      "description": "Whether to delete commands from users which don't have rights to use that command",
+      "value": "True",
+      "required": false
+    },
+    "STRICT_GBAN": {
+      "description": "Enforce gbans across new groups as well as old groups. When a gbanned user talks, he will be banned.",
+      "value": "True",
+      "required": false
+    },
+    "ALLOW_EXCL": {
+      "description": "Whether to allow using exclamation marks ! for commands as well as /.",
+      "value": "True"
+    },
+    "BAN_STICKER": {
+      "description": "Which sticker to use when banning people. Use https://telegram.dog/ShowJsonBot to get the file_id",
+      "value": "CAADBAAD6AMAAkJ_EQNu_RjOszbmnxYE",
+      "required": false
+    },
+    "API_KEY": {
+      "description": "API Key Here",
+      "value": "-xyz",
+    "required": false
+    },
+    "NO_LOAD": {
+      "description": "Modules Loader.",
+      "value": "['translation', 'sed']"
+    },
+    "SQLALCHEMY_DATABASE_URI": {
+      "description": "db.",
+      "value": "sqldbtype://username:pw@hostname:port/db_name"
+      
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.6"
+      }
+    }
+  ]
+}
