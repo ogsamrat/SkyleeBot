@@ -32,22 +32,31 @@ from skylee.modules.helper_funcs.alternate import typing_action
 
 
 PM_START_TEXT = f"""
-Hey there! my name is *{dispatcher.bot.first_name}*. If you have any questions on how to use me, Click Help button.
+Hey There ! My name is 𝙈𝙚𝙞𝙠𝙤 
 
 I'm here to make your group management fun and easy!
-i have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
 
-Any issues or need help related to me? join our group [skylee support chat](https://t.me/skyleebot).
+I have lots of handy features, such as flood control, a warning system, a note keeping system, and even replies on predetermined filters.
+
+Please Click Help Button For Assistance And Help Regarding Special Modules
+
+You can find the list of available commands with Help Module.
+
+Any issues or need help related to me? join our group [MeikoSupportChat](https://t.me/meikoSupportChat).
 
 Wanna Add me to your Group? Just click the button below!
+==========================
+✗ [Support Channel](t.me/Meikosupport)
+✗ [Support Group](t.me/meikoSupportChat)
+==========================
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Add to Group 👥", url="t.me/skylee_bot?startgroup=true"
+            text="Add Me To Your Group ➕", url="t.me/meikobot?startgroup=true"
         ),
-        InlineKeyboardButton(text="Updates 📢", url="https://t.me/skyleeupdates"),
+        InlineKeyboardButton(text="Updates & Info 📃", url="https://t.me/meikosupport"),
     ]
 ]
 
@@ -60,10 +69,10 @@ I'm a modular group management bot with a few fun extras! Have a look at the fol
 the things I can help you with.
 
 *Main* commands available:
- × /start: Starts me, can be used to check i'm alive or no...
- × /help: PM's you this message.
- × /help <module name>: PM's you info about that module.
- × /settings: in PM: will send you your settings for all supported modules.
+ ✗ /start: Starts me, can be used to check i'm alive or no...
+ ✗ /help: PM's you this message.
+ ✗ /help <module name>: PM's you info about that module.
+ ✗ /settings: in PM: will send you your settings for all supported modules.
    - in a group: will redirect you to pm, with all that chat's settings.
  \nClick on the buttons below to get documentation about specific modules!"""
 
@@ -165,7 +174,7 @@ def start(update, context):
 
         else:
             update.effective_message.reply_photo(
-                "https://telegra.ph/file/4edfb3738a35bdfa1922f.jpg",
+                "https://telegra.ph/file/0a6a55b868d5e7d874295.jpg",
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
