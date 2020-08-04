@@ -457,8 +457,8 @@ def rmemes(update, context):
     memeu = res.get(str("url"))  # meme pic url
     plink = res.get(str("postLink"))
 
-    caps = f"× <b>Title</b>: {title}\n"
-    caps += f"× <b>Subreddit:</b> <pre>r/{rpage}</pre>"
+    caps = f"✗ <b>Title</b>: {title}\n"
+    caps += f"✗ <b>Subreddit:</b> <pre>r/{rpage}</pre>"
 
     keyb = [[InlineKeyboardButton(text="Subreddit Postlink 🔗", url=plink)]]
     try:
@@ -478,8 +478,8 @@ def rmemes(update, context):
 @run_async
 def staff_ids(update, context):
     sfile = "List of SUDO & SUPPORT users:\n"
-    sfile += f"× SUDO USER IDs; {SUDO_USERS}\n"
-    sfile += f"× SUPPORT USER IDs; {SUPPORT_USERS}"
+    sfile += f"✗ SUDO USER IDs; {SUDO_USERS}\n"
+    sfile += f"✗ SUPPORT USER IDs; {SUPPORT_USERS}"
     with BytesIO(str.encode(sfile)) as output:
         output.name = "staff-ids.txt"
         update.effective_message.reply_document(
@@ -500,15 +500,15 @@ def stats(update, context):
 __help__ = """
 An "odds and ends" module for small, simple commands which don't really fit anywhere
 
- × /id: Get the current group id. If used by replying to a message, gets that user's id.
- × /info: Get information about a user.
- × /wiki : Search wikipedia articles.
- × /rmeme: Sends random meme scraped from reddit.
- × /ud <query> : Search stuffs in urban dictionary.
- × /wall <query> : Get random wallpapers directly from bot! 
- × /reverse : Reverse searches image or stickers on google.
- × /gdpr: Deletes your information from the bot's database. Private chats only.
- × /markdownhelp: Quick summary of how markdown works in telegram - can only be called in private chats.
+ ✗ /id: Get the current group id. If used by replying to a message, gets that user's id.
+ ✗ /info: Get information about a user.
+ ✗ /wiki : Search wikipedia articles.
+ ✗ /rmeme: Sends random meme scraped from reddit.
+ ✗ /ud <query> : Search stuffs in urban dictionary.
+ ✗ /wall <query> : Get random wallpapers directly from bot! 
+ ✗ /reverse : Reverse searches image or stickers on google.
+ ✗ /gdpr: Deletes your information from the bot's database. Private chats only.
+ ✗ /markdownhelp: Quick summary of how markdown works in telegram - can only be called in private chats.
 """
 
 __mod_name__ = "Miscs"
