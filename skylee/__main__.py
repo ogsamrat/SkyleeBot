@@ -183,7 +183,7 @@ def start(update, context):
             )
     else:
         update.effective_message.reply_text(
-            "Sending you a warm hi & wishing your day is a happy one!"
+            "Heya :-) PM Me If You Have Any Questions Or Doubts On How To Use Me !"
         )
 
 
