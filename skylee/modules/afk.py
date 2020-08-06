@@ -110,7 +110,7 @@ When marked as AFK, any mentions will be replied to with a message to say you're
  ✗ brb <reason>: Same as the afk command - but not a command.
 """
 
-__mod_name__ = "BRB"
+__mod_name__ = "AFK"
 
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
