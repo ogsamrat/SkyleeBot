@@ -352,7 +352,7 @@ def list_notes(update, context):
             )
         except ValueError:
             update.effective_message.reply_text(
-                "There was a problem in showing notes list, maybe due to some invalid character in note names. Ask in @skyleebot if you're unable to figure it out!"
+                "There was a problem in showing notes list, maybe due to some invalid character in note names. Ask in @MeikoSupport if you're unable to figure it out!"
             )
 
 
@@ -381,7 +381,7 @@ def clear_notes(update, context):
                         ],
                         [
                             InlineKeyboardButton(
-                                text="⚠️ Cancel", callback_data="rmnotes_cancel"
+                                text="Cancel", callback_data="rmnotes_cancel"
                             )
                         ],
                     ]
