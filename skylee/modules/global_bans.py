@@ -167,7 +167,7 @@ def gban(update, context):
         return
 
     message.reply_text(
-        f"<b>Beginning of Global Ban for</b> {mention_html(user_chat.id, user_chat.first_name)}"
+        f"<b>Global Banned</b> {mention_html(user_chat.id, user_chat.first_name)}"
         f"\n<b>With ID</b>: <code>{user_chat.id}</code>"
         f"\n<b>Reason</b>: <code>{reason or 'No reason given'}</code>",
         parse_mode=ParseMode.HTML,
