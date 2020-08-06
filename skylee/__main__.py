@@ -177,7 +177,7 @@ def start(update, context):
             )
     else:
         update.effective_message.reply_text(
-            "Heya :-) PM Me If You Have Any Questions Or Doubts On How To Use Me !"
+            "Heya :) PM me if you have any questions on how to use me!"
         )
 
 
