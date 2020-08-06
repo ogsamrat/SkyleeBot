@@ -41,7 +41,7 @@ def ban(update, context):
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("Dude atleast refer some user to ban!")
+        message.reply_text("Hey ! Please atleast refer some user to ban!")
         return ""
 
     try:
@@ -54,11 +54,11 @@ def ban(update, context):
             raise
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("I'm not gonna ban an admin, don't make fun of yourself!")
+        message.reply_text("I'm not gonna ban an admin ! Lol ")
         return ""
 
     if user_id == context.bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy or wot?")
+        message.reply_text("I'm not gonna Ban myself, are you crazy ?")
         return ""
 
     log = (
@@ -80,7 +80,7 @@ def ban(update, context):
         # context.bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
         context.bot.sendMessage(
             chat.id,
-            "let {} walk the plank.".format(
+            "{} Got Crushed By Ban Hammer !".format(
                 mention_html(member.user.id, member.user.first_name)
             ),
             parse_mode=ParseMode.HTML,
@@ -125,7 +125,7 @@ def temp_ban(update, context):
     user_id, reason = extract_user_and_text(message, args)
 
     if not user_id:
-        message.reply_text("Dude! atleast refer some user to ban...")
+        message.reply_text("Hey ! Please atleast refer some user to ban...")
         return ""
 
     try:
@@ -138,11 +138,11 @@ def temp_ban(update, context):
             raise
 
     if is_user_ban_protected(chat, user_id, member):
-        message.reply_text("Wow! let's start banning Admins themselves?...")
+        message.reply_text("Wew! let's start banning Admins themselves?...")
         return ""
 
     if user_id == context.bot.id:
-        message.reply_text("I'm not gonna BAN myself, are you crazy or wot?")
+        message.reply_text("I'm not gonna Ban myself, are you crazy ?")
         return ""
 
     if not reason:
@@ -188,7 +188,7 @@ def temp_ban(update, context):
         if excp.message == "Reply message not found":
             # Do not reply
             message.reply_text(
-                "Goodbye.. we'll meet after {}.".format(time_val), quote=False
+                "Bye.. we'll meet after {} !".format(time_val), quote=False
             )
             return log
         else:
