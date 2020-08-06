@@ -183,7 +183,7 @@ def new_member(update, context):
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    "Master is in the houseeee, let's get this party started!",
+                    "Master is in the Group, let's get this party started!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -192,7 +192,7 @@ def new_member(update, context):
             elif new_mem.id == context.bot.id:
                 update.effective_message.reply_text(
                     "Hey {}, I'm {}! Thank you for adding me to {}"
-                    " and be sure to join our channel: @skyleeupdates to know more about updates and tricks!".format(
+                    "I Will Try My Best To Manage Your Group Efficiently".format(
                         user.first_name, context.bot.first_name, chat_name
                     ),
                     reply_to_message_id=reply,
