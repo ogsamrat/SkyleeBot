@@ -409,7 +409,7 @@ def __user_info__(user_id):
         user = sql.get_gbanned_user(user_id)
         if user.reason:
             text += "\nReason: {}".format(html.escape(user.reason))
-            text += "\n\nAppeal at @skyleebot if you think it's invalid."
+            text += "\n\nAppeal at @MeikosupportChat if you think it's a Mistake !"
     else:
         text = text.format("No")
     return text
@@ -432,7 +432,7 @@ Spam shield uses @Spamwatch API and Global bans to remove Spammers as much as po
 *What is SpamWatch?*
 
 SpamWatch maintains a large constantly updated ban-list of spambots, trolls, bitcoin spammers and unsavoury characters.
-Skylee will constantly help banning spammers off from your group automatically So, you don't have to worry about spammers storming your group[.](https://telegra.ph/file/c1051d264a5b4146bd71e.jpg)
+Meiko will constantly help banning spammers off from your group automatically So, you don't have to worry about spammers storming your group[.](https://telegra.ph/file/c1051d264a5b4146bd71e.jpg)
 """
 
 __mod_name__ = "Spam Shield"
