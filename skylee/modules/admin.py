@@ -46,16 +46,16 @@ def promote(update, context):
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text("mention one.... 🤷🏻‍♂.")
+        message.reply_text("Hey ! Mention A User 🤷")
         return ""
 
     user_member = chat.get_member(user_id)
     if user_member.status == "administrator" or user_member.status == "creator":
-        message.reply_text("This person is already an admin...!")
+        message.reply_text("This Person Is Already An Admin In This Chat")
         return ""
 
     if user_id == context.bot.id:
-        message.reply_text("I hope, if i could promote myself!")
+        message.reply_text("Oh , God Give Me Powers To Promote Myself 😭")
         return ""
 
     # set same perms as bot - bot can't assign higher perms than itself!
@@ -73,7 +73,7 @@ def promote(update, context):
         can_pin_messages=bot_member.can_pin_messages,
     )
 
-    message.reply_text("Promoted🧡")
+    message.reply_text("Yay ! Promoted Successfuly ! Now Give Party 🍻")
     return (
         "<b>{}:</b>"
         "\n#PROMOTED"
@@ -104,12 +104,12 @@ def demote(update, context):
 
     user_id = extract_user(message, args)
     if not user_id:
-        message.reply_text("mention one.... 🤷🏻‍♂.")
+        message.reply_text("Hey , Mention A User 🤷 !")
         return ""
 
     user_member = chat.get_member(user_id)
     if user_member.status == "creator":
-        message.reply_text("I'm not gonna demote Creator this group.... 🙄")
+        message.reply_text("Oh ! Really ? Demoting A Creator 🙄")
         return ""
 
     if not user_member.status == "administrator":
@@ -119,7 +119,7 @@ def demote(update, context):
         return ""
 
     if user_id == context.bot.id:
-        message.reply_text("Yeahhh... Not gonna demote myself!")
+        message.reply_text("Oh ! I am Not Gonna Demote Myself")
         return ""
 
     try:
@@ -134,7 +134,7 @@ def demote(update, context):
             can_restrict_members=False,
             can_pin_messages=False,
         )
-        message.reply_text("Successfully demoted!")
+        message.reply_text("Successfully Demoted !")
         return (
             "<b>{}:</b>"
             "\n#DEMOTED"
@@ -282,13 +282,13 @@ def adminlist(update, context):
         name = f"{(mention_html(user.id, user.first_name))}"
         if status == "creator":
             text += "\n 🦁 Creator:"
-            text += "\n • {} \n\n 🦊 Admin:".format(name)
+            text += "\n ✗ {} \n\n 🐯 Admin:".format(name)
     for admin in administrators:
         user = admin.user
         status = admin.status
         name = f"{(mention_html(user.id, user.first_name))}"
         if status == "administrator":
-            text += "\n • {}".format(name)
+            text += "\n  {}".format(name)
     update.effective_message.reply_text(text, parse_mode=ParseMode.HTML)
 
 
@@ -314,7 +314,7 @@ def set_title(update, context):
 
     if user_member.status == "creator":
         message.reply_text(
-            "This person CREATED the chat, how can i set custom title for him?"
+            "This person Created the chat, How Can i set Custom Title For Him?"
         )
         return
 
