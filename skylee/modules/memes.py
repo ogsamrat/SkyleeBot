@@ -413,7 +413,7 @@ def stretch(update, context):
 @run_async
 def me_too(update, context):
     message = update.effective_message
-    reply = random.choice(["Me too thanks", "Haha yes, me too", "Same lol", "Me irl"])
+    reply = random.choice(["Me too thanks", "Haha yes, me too", "Same lol", "Lol Same With Mine"])
     message.reply_text(reply)
 
 
@@ -457,7 +457,7 @@ Some dank memes for fun or whatever!
 Some other regex filters are:
 `me too` | `goodmorning` | `goodnight`.
 
-Skylee will reply random strings accordingly when these words are used!
+Meiko will reply random strings accordingly when these words are used!
 All regex filters can be disabled incase u don't want... like: `/disable metoo`.
 
 """
