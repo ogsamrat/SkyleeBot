@@ -15,7 +15,7 @@ from telegram.utils.helpers import mention_html, escape_markdown
 
 from skylee import dispatcher, LOGGER
 from skylee.modules.disable import DisableAbleCommandHandler
-from skylee.modules.helper_funcs.chat_status import user_admin
+from skylee.modules.helper_funcs.chat_status import user_admin, user_can_changeinfo
 from skylee.modules.helper_funcs.extraction import extract_text
 from skylee.modules.helper_funcs.filters import CustomFilters
 from skylee.modules.helper_funcs.misc import build_keyboard_parser
@@ -105,7 +105,7 @@ def filters(update, context):
         None, 1
     )  # use python's maxsplit to separate Cmd, keyword, and reply_text
 
-if user_can_changeinfo(chat, user, context.bot.id) is False:
+    if user_can_changeinfo(chat, user, context.bot.id) is False:
         message.reply_text("You don't have enough rights to Add Filter users!")
         return ""
 
