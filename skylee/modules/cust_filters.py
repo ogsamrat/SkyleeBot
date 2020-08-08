@@ -105,8 +105,8 @@ def filters(update, context):
         None, 1
     )  # use python's maxsplit to separate Cmd, keyword, and reply_text
 
-    if user_can_changeinfo(chat, user, context.bot.id) is False:
-        message.reply_text("You don't have enough rights to Add Filter users!")
+   if user_can_changeinfo(chat, user, context.bot.id) is False:
+        message.reply_text("You don't have enough rights to ban users!")
         return ""
 
     conn = connected(context.bot, update, chat, user.id)
