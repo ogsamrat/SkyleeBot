@@ -15,7 +15,7 @@ from telegram.utils.helpers import mention_html, escape_markdown
 
 from skylee import dispatcher, LOGGER
 from skylee.modules.disable import DisableAbleCommandHandler
-from skylee.modules.helper_funcs.chat_status import user_admin, user_can_changeinfo
+from skylee.modules.helper_funcs.chat_status import user_admin
 from skylee.modules.helper_funcs.extraction import extract_text
 from skylee.modules.helper_funcs.filters import CustomFilters
 from skylee.modules.helper_funcs.misc import build_keyboard_parser
