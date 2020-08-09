@@ -253,7 +253,7 @@ def save(update, context):
 
     msg = update.effective_message
 
-if user_can_ban(chat, user, context.bot.id) is False:
+if user_can_changeinfo(chat, user, context.bot.id) is False:
         msg.reply_text("You don't have enough rights to Add Notes !")
         return ""
 
