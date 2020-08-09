@@ -19,6 +19,7 @@ import skylee.modules.sql.notes_sql as sql
 from skylee import dispatcher, MESSAGE_DUMP, LOGGER
 from skylee.modules.disable import DisableAbleCommandHandler
 from skylee.modules.helper_funcs.chat_status import user_admin, user_admin_no_reply
+from skylee.modules.helper_funcs.admin_rights import user_can_changeinfo
 from skylee.modules.helper_funcs.misc import build_keyboard, revert_buttons
 from skylee.modules.helper_funcs.msg_types import get_note_type
 from skylee.modules.helper_funcs.string_handling import (
@@ -251,6 +252,10 @@ def save(update, context):
             chat_name = chat.title
 
     msg = update.effective_message
+
+if user_can_ban(chat, user, context.bot.id) is False:
+        msg.reply_text("You don't have enough rights to Add Notes !")
+        return ""
 
     note_name, text, data_type, content, buttons = get_note_type(msg)
     note_name = note_name.lower()
