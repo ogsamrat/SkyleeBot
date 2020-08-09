@@ -253,12 +253,12 @@ def save(update, context):
 
     msg = update.effective_message
 
-if user_can_changeinfo(chat, user, context.bot.id) is False:
-        msg.reply_text("You don't have enough rights to Add Notes !")
-        return ""
-
     note_name, text, data_type, content, buttons = get_note_type(msg)
     note_name = note_name.lower()
+
+    if user_can_changeinfo(chat, user, context.bot.id) is False:
+        msg.reply_text("You don't have enough rights to Add Notes !")
+        return ""
 
     if data_type is None:
         msg.reply_text("Bruh! there's no note")
