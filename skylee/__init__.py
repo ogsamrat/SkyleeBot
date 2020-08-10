@@ -3,7 +3,6 @@ import os
 import sys
 import spamwatch
 from telethon import TelegramClient
-from .modules import func as funt
 import telegram.ext as tg
 
 # enable logging
@@ -148,9 +147,7 @@ if SPAMWATCH == None:
 else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
-# music 
-catmusic = funt.catmusic 
-catmusicvideo = funt.catmusicvideo
+
 
 # Telethon
 api_id = TELETHON_ID
