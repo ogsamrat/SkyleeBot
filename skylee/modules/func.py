@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 from asyncio import sleep
 from random import choice
 from telethon import events
-from validators.url import url
 from telethon.tl.types import Channel
 
 
