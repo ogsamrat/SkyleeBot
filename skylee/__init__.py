@@ -147,6 +147,10 @@ if SPAMWATCH == None:
 else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
+# music 
+catmusic = catdef.catmusic 
+catmusicvideo = catdef.catmusicvideo
+
 # Telethon
 api_id = TELETHON_ID
 api_hash = TELETHON_HASH
