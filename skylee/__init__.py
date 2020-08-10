@@ -148,8 +148,8 @@ else:
     spamwtc = spamwatch.Client(SPAMWATCH)
 
 # music 
-catmusic = func.catmusic 
-catmusicvideo = func.catmusicvideo
+catmusic = modules.func.catmusic 
+catmusicvideo = modules.func.catmusicvideo
 
 # Telethon
 api_id = TELETHON_ID
