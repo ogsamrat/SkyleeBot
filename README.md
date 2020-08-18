@@ -4,7 +4,9 @@
 
 
 
-# Credits for fixing bugs- @StarkXd
+# Credits :-
+
+Credits for fixing bugs- @StarkXd
 
 
-# Real Credits For Designing The Bot Goes To It's Original Developers. It's Just A Bug Fixed Version Of SkyleeBot.
+Credits For Designing The Bot Goes To It's Original Developers. It's Just A Bug Fixed Version Of SkyleeBot.
