@@ -1,6 +1,6 @@
 
 {
-  "name": "Meiko",
+  "name": "Skylee",
   "description": "Telegram's Pro group manager. Modular Telegram group management bot!",
   "logo": "https://telegra.ph/file/63350037b2146671a2511.jpg",
   "keywords": [
@@ -10,7 +10,7 @@
     "manager",
     "3"
   ],
-  "repository": "https://github.com/starry69/skylee.git",
+  "repository": "https://github.com/EmiliaDevs/SkyleeBot.git",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable env variables",
@@ -20,14 +20,24 @@
       "description": "Your bot token, as a string.",
       "value": ""
     },
+    "TL_APP_ID": {
+      "description": "Your account API ID. Get it from my.telegram.org",
+      "value": "",
+      "required": true
+    },
+    "TL_HASH": {
+      "description": "Your account HASH. Get it from my.telegram.org",
+      "value": "",
+      "required": true
+    },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
-      "value": "1115280928",
+      "value": "1083049180",
       "required": false
     },
     "OWNER_USERNAME": {
       "description": "Your username",
-      "value": "StarkxD",
+      "value": "GodDrick",
       "required": false
     },
     "WEBHOOK": {
@@ -45,15 +55,15 @@
     },
     "SUDO_USERS": {
       "description": "A space separated list of user_ids which should be considered sudo users",
-      "value": "1263617196"
+      "value": "1083049180"
     },
     "SUPPORT_USERS": {
       "description": "A space separated list of user_ids which should be considered support users (can gban/ungban, nothing else)",
-      "value": "1263617196"
+      "value": "1083049180"
     },
     "WHITELIST_USERS": {
       "description": "A space separated list of user_ids which should be considered whitelisted - they can't be banned.",
-      "value": "1263617196"
+      "value": "1083049180"
     },
     "DONATION_LINK": {
       "description": "Optional: link where you would like to receive donations.",
